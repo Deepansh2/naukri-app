@@ -11,8 +11,8 @@ const jobSchema = new mongoose.Schema({
         required : true,
         enum : [constants.jobStatus.closed,constants.jobStatus.open]
     },
-    jobDescription : {
-        type : mongoose.SchemaTypes.ObjectId,
+    jobsAppliedBy: {
+        type : [mongoose.SchemaTypes.ObjectId],
         ref : "user"
     },
     createdAt : {
