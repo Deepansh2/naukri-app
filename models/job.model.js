@@ -13,7 +13,7 @@ const jobSchema = new mongoose.Schema({
     },
     jobDescription : {
         type : mongoose.SchemaTypes.ObjectId,
-        ref : "company"
+        ref : "user"
     },
     createdAt : {
         type : Date,

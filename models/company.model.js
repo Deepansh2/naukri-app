@@ -9,8 +9,8 @@ const companySchema = new mongoose.company({
         type:String,
         required : true
     },
-    jobPosted : {
-        type : mongoose.SchemaTypes.ObjectId,
+    jobsPosted : {
+        type : [mongoose.SchemaTypes.ObjectId],
         ref :"job"
     },
     companyType : {
