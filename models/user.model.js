@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
         type : String,
         required :true,
         lowercase : true,
+        trim : true, // it will remove the spaces btw the words
         minLength : 10,
         unique : true
     },
@@ -61,6 +62,6 @@ const userSchema = new mongoose.Schema({
         ref : "company"
     }
 
-});
+},{timestamps:true,versionKey:false});
 
 module.exports = mongoose.model("user",userSchema)
