@@ -13,6 +13,10 @@ const companySchema = new mongoose.company({
         type : [mongoose.SchemaTypes.ObjectId],
         ref :"job"
     },
+    hrs : {
+        type : [mongoose.SchemaTypes.ObjectId],
+        ref : "user"
+    },
     companyType : {
         type : String,
         required : true

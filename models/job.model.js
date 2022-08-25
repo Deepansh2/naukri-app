@@ -11,8 +11,12 @@ const jobSchema = new mongoose.Schema({
         required : true,
         enum : [constants.jobStatus.closed,constants.jobStatus.open]
     },
-    jobsAppliedBy: {
+    applicants: {
         type : [mongoose.SchemaTypes.ObjectId],
+        ref : "user"
+    },
+    postedBy : {
+        type : mongoose.SchemaTypes.ObjectId,
         ref : "user"
     },
     createdAt : {
