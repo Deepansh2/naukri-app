@@ -43,7 +43,7 @@ exports.signup = async (req,res) => {
 }
 }
 
-module.signin = (req,res)=>{
+exports.signin = (req,res)=>{
 
     try{
 
