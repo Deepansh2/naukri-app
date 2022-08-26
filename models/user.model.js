@@ -57,11 +57,11 @@ const userSchema = new mongoose.Schema({
         type : [mongoose.SchemaTypes.ObjectId],
         ref : "job"
     },
-    companyId : {
-        Type : mongoose.SchemaTypes.ObjectId,
+    companyId : { //  user belongs to this company and in company schema it will have field of hrs 
+        Type : mongoose.SchemaTypes.ObjectId,//basically it is for hr field only
         ref : "company"
     }
 
-},{timestamps:true,versionKey:false});
+},{versionKey:false});
 
 module.exports = mongoose.model("user",userSchema)

@@ -34,5 +34,5 @@ const companySchema = new mongoose.company({
             return Date.now()
         }
     }
-}, { timestamps: true, versionKey: false });
+}, {versionKey: false });
 module.exports = mongoose.model("company",companySchema)
