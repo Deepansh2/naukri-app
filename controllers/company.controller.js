@@ -6,7 +6,7 @@ exports.create = (req,res) =>{
     const companyObj = {
         companyName : req.body.companyName,
         description : req.body.description,
-        hrs : req.userId,
+        hrs : req.companyId,
         jobsPosted : req.userId,
         companyType: req.body.companyType
     }
