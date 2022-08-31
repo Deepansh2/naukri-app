@@ -23,7 +23,8 @@ exports.signup = async (req,res) => {
     }
 
     try{
-    const userCreated = await User.create(userObj)
+    const userCreated = await User.create(userObj);
+    console.log("userCreated",userCreated)
 
     const response = {
         name :userCreated.name,
@@ -47,7 +48,7 @@ exports.signin = (req,res)=>{
 
     try{
 
-    const user = User.findOne({userId : req.body.userId});
+    const user = await User.findOne({userId : req.body.userId});
 
     if(user == null){
         return res.status(400).send({

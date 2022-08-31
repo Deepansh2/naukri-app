@@ -5,7 +5,7 @@ const companySchema = new mongoose.company({
         type : String,
         required: true
     },
-    Description : {
+    description : {
         type:String,
         required : true
     },
