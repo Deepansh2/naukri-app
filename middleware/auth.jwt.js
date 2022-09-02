@@ -106,6 +106,7 @@ const verifyApplyOrUpdateJob =  (req,res,next) =>{
             })
         }
     }
+    next()
 }
 
 const authJwt = {

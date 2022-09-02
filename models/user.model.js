@@ -58,7 +58,7 @@ const userSchema = new mongoose.Schema({
         ref : "job"
     },
     companyId : { //  user belongs to this company and in company schema it will have field of hrs 
-        Type : mongoose.SchemaTypes.ObjectId,//basically it is for hr field only
+        type : mongoose.SchemaTypes.ObjectId,//basically it is for hr field only
         ref : "company"
     }
 

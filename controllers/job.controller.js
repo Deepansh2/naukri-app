@@ -96,7 +96,7 @@ let jobApply = async (req,res,job,user) =>{
     user.jobsApplied.push(job._id);
     const userUpdated = await user.save();
 
-    return res.status(200).send(userUpdated)
+    return res.status(200).send(jobUpdated,userUpdated)
     }catch(err){
         console.log(err.message);
         return res.status(500).send({
