@@ -19,7 +19,7 @@ exports.create = async (req,res)  =>{
     }
 
     try{
-    const company = Company.findOne({_id:Job.companyId});
+    const company = await Company.findOne({_id:Job.companyId});
     if(!company){
         return res.status(200).send({
             message : "company Doesn't exist"
@@ -106,7 +106,7 @@ let jobApply = async (req,res,job,user) =>{
 }
 
 
-exports.deleteJob = (req,res) =>{
+exports.deleteJob = async (req,res) =>{
 
     try{
 

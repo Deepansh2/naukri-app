@@ -89,7 +89,7 @@ const isApplicant = async (req,res,next) =>{
     }
 } 
 
-const verifyApplyOrUpdateJob =  (req,res,next) =>{
+const verifyApplyOrUpdateJob = async (req,res,next) =>{
     const user = await User.findOne({userId : req.userId});
     
     if(req.query.jobApply){
