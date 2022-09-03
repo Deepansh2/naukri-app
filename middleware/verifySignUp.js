@@ -1,7 +1,7 @@
 const User = require("../models/user.model")
 const constants = require("../utils/constant")
 
-const verifySignUpReqBody = (req,res,next) =>{
+const verifySignUpReqBody = async (req,res,next) =>{
 
     try{
     if(!req.body.name){

@@ -1,7 +1,7 @@
 const User = require("../models/user.model")
 const objectConverter = require("../utils/objectConverter")
 
-exports.findAll = (req,res) =>{
+exports.findAll = async (req,res) =>{
 
     const queryObj = {};
     const userTypeQP = req.query.userType
@@ -42,7 +42,7 @@ exports.findByUserId =  async (req,res) =>{
 exports.update = async (req,res) =>{
 
     try{
-    const user = User.findOne({userId : req.params.id});
+    const user = await User.findOne({userId : req.params.id});
     user.userType = req.body.userType != undefined ? req.body.userType:user.userType;
     user.userStatus = req.body.userStatus!=undefined?req.body.userStatus:user.userStatus;
     user.name = req.body.name != undefined?req.body.name :user.name
